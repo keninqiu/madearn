@@ -17,11 +17,28 @@ export const routes: Routes = [
     loadChildren: () => import('./pages/pages.module')
       .then(m => m.PagesModule),
   },
+
+  {
+    path: 'home',
+    canActivate: [ThemeGuard],
+    loadChildren: () => import('./home/home.module')
+      .then(m => m.HomeModule),
+  },
+
+  {
+    path: 'auth',
+    canActivate: [ThemeGuard],
+    loadChildren: () => import('./auth/auth.module')
+      .then(m => m.AuthModule),
+  },
+
+  /*
   {
     path: 'themes',
     loadChildren: () => import('app/themes-screen/starter.module')
       .then(m => m.StarterModule),
   },
+  */
   {
     path: 'auth',
     component: NbAuthComponent,
