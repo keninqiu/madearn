@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WalletService } from '../../services/wallet.service';
 
 @Component({
   selector: 'ngx-login',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
+  account: any;
+  constructor(private walletServ: WalletService) { }
 
   ngOnInit(): void {
   }
 
+  connectWallet() {
+    if(!this.account) {
+      this.walletServ.connectWalletNew();
+    } 
+  }
 }

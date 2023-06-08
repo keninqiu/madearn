@@ -22,6 +22,7 @@ import {
 } from '@nebular/theme';
 import {InlineSVGModule} from 'ng-inline-svg';
 
+import { WalletService } from './services/wallet.service';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -43,6 +44,7 @@ import {InlineSVGModule} from 'ng-inline-svg';
     InlineSVGModule.forRoot(),
   ],
   bootstrap: [AppComponent],
+  providers: [WalletService]
 })
 export class AppModule {
 }

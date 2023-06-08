@@ -40,7 +40,7 @@ export const routes: Routes = [
   },
   */
   {
-    path: 'auth',
+    path: 'auth2',
     component: NbAuthComponent,
     canActivate: [ThemeGuard],
     children: [
