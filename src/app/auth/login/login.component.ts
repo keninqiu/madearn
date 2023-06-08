@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
   constructor(private walletServ: WalletService) { }
 
   ngOnInit(): void {
+    console.log('ok');
   }
 
   connectWallet() {
