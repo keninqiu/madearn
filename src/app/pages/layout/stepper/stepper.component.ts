@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'ngx-stepper',
@@ -8,11 +8,11 @@ import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms
 })
 export class StepperComponent implements OnInit {
 
-  firstForm: UntypedFormGroup;
-  secondForm: UntypedFormGroup;
-  thirdForm: UntypedFormGroup;
+  firstForm: FormGroup;
+  secondForm: FormGroup;
+  thirdForm: FormGroup;
 
-  constructor(private fb: UntypedFormBuilder) {
+  constructor(private fb: FormBuilder) {
   }
 
   ngOnInit() {

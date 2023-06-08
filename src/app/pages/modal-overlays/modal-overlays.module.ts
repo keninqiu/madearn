@@ -77,15 +77,18 @@ const SERVICES = [
 ];
 
 @NgModule({
-    imports: [
-        ...MODULES,
-    ],
-    declarations: [
-        ...COMPONENTS,
-    ],
-    providers: [
-        ...SERVICES,
-    ],
+  imports: [
+    ...MODULES,
+  ],
+  declarations: [
+    ...COMPONENTS,
+  ],
+  providers: [
+    ...SERVICES,
+  ],
+  entryComponents: [
+    ...ENTRY_COMPONENTS,
+  ],
 })
 export class ModalOverlaysModule {
 }
